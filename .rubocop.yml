@@ -1,0 +1,54 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/*'
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/LineLength:
+  Max: 100
+  IgnoredPatterns: ['\A#']
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Metrics:
+  Severity: refactor
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/initializers/**/*'
+    - 'lib/tasks/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/support/**/*'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
