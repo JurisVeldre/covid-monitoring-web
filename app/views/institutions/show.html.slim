@@ -1,0 +1,12 @@
+h1.my-4
+ = @presenter.institution.name
+.row
+  - @presenter.institution.rooms.each do |room|
+    .col-lg-4.col-sm-6.mb-4
+      .card.h-100
+        a href="#"
+          img.card-img-top alt="" src="https://www.nicepng.com/png/detail/154-1549461_3d-house-vector-vector-houses-icon-png.png" /
+        .card-body
+          h3.card-title
+            a
+              = "Telpa Nr. #{room.name}"
