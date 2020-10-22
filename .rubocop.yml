@@ -4,6 +4,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'bin/*'
+    - 'node_modules/**/*'
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
