@@ -1,0 +1,16 @@
+en:
+  simple_form:
+    required:
+      html: '*'
+    labels:
+      institution:
+        name: Nosaukums
+      institutions_room:
+        name: Telpas numurs
+        sensor_id: Sensora identifikators
+    error_notification:
+      default_message: "Please review the problems below:"
+  helpers:
+    submit:
+      create: Izveidot
+      update: Saglabāt

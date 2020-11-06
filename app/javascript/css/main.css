@@ -3,3 +3,11 @@
   height: 150px;
   padding: 10px;
 }
+
+.bg-green{
+  background-color: #d4edda;
+}
+
+.bg-red{
+  background-color: #f8d7da;
+}

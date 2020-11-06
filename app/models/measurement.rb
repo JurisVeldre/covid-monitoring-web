@@ -6,7 +6,7 @@ class Measurement
   field :humidity, type: String
   field :co2, type: String
 
-  belongs_to :room
+  belongs_to :room, class_name: 'Institutions::Room'
 
   validates :humidity, :co2, :room_id, presence: true
 end

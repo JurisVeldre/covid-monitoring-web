@@ -1,11 +1,22 @@
+nav aria-label="breadcrumb"
+  ol.breadcrumb
+    li.breadcrumb-item
+      a href="#{@presenter.institutions_link}"  Iestādes
+    li.breadcrumb-item.active aria-current="page"
+      = @presenter.institution.name
+
 h1.my-4
   = @presenter.institution.name
+
+  = link_to new_institution_room_path(institution_id: @presenter.institution.id), class: 'btn btn-primary float-right' do
+    |Pievienot
+
   - if @presenter.institution.rooms.present?
     .row
       - @presenter.institution.rooms.each do |room|
         .col-lg-4.col-sm-6.mb-4
           .card.h-100
-            a href=room_path(room)
+            a href=institution_room_path(institution_id: @presenter.institution.id, id: room.id)
               img.card-img-top alt="" src="https://www.pngitem.com/pimgs/m/379-3799346_3d-room-design-template-hd-png-download.png" /
             .card-body
               h3.card-title

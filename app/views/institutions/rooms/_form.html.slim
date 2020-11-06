@@ -1,0 +1,11 @@
+= simple_form_for form, url: institution_rooms_path do |f|
+  .card
+    .card-header
+      .card-title
+        = 'Pievienot jaunu telpu'
+    .card-body
+      = f.input :name
+      = f.input :sensor_id
+    .card-footer
+      = f.button :submit, class: 'btn btn-primary'
+      = link_to('Atcelt', cancel_path, class: 'btn btn-secondary')

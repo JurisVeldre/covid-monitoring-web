@@ -190,6 +190,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (2.3.0)
+    simple_form (5.0.3)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -257,6 +260,7 @@ DEPENDENCIES
   rubocop (~> 0.79.0)
   rubocop-rails (~> 2.4.1)
   selenium-webdriver
+  simple_form (~> 5.0.1)
   slim (~> 4.0.1)
   slim-rails (~> 3.2.0)
   spring

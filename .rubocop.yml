@@ -5,6 +5,7 @@ AllCops:
     - 'vendor/**/*'
     - 'bin/*'
     - 'node_modules/**/*'
+    - 'config/initializers/*'
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation

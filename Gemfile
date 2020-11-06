@@ -14,6 +14,7 @@ gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 5.2.1'
 
 # Views
+gem 'simple_form', '~> 5.0.1'
 gem 'slim', '~> 4.0.1'
 gem 'slim-rails', '~> 3.2.0'
 

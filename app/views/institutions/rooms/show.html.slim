@@ -8,18 +8,15 @@ nav aria-label="breadcrumb"
     li.breadcrumb-item.active aria-current="page"
       = "Telpa Nr. #{@presenter.room.name}"
 
-.jumbotron.jumbotron-fluid
-  .container
-    h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
-
 - if @presenter.room_measurement.present?
-
-  - if @presenter.quality_in_limits
-    .alert.alert-success role="alert"
-      | Telpas gaisa kvalitāte ir normas robežās!
-  - else
-    .alert.alert-danger role="alert"
-      | Uzsāciet telpas vēdināšanu!
+  .jumbotron.jumbotron-fluid class=(@presenter.quality_in_limits ? 'bg-green' : 'bg-red')
+    .container
+      - if @presenter.quality_in_limits
+        h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+        | Telpas gaisa kvalitāte ir normas robežās!
+      - else
+        h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+        | Uzsāciet telpas vēdināšanu!
 
   .row
     .col-sm-6
@@ -27,20 +24,24 @@ nav aria-label="breadcrumb"
         .d-flex.justify-content-center
           img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/2784/2784423.svg"
         .card-body class=(@presenter.co2_check ? 'bg-success' : 'bg-danger')
-          h5.card-title
+          h1.card-title.text-light
             | Co2 (ppm)
-          h1.card-title
+          h1.card-title.text-light
             = @presenter.room_measurement.co2
     .col-sm-6
       .card
         .d-flex.justify-content-center
           img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/3209/3209891.svg"
         .card-body class=(@presenter.humidity_check ? 'bg-success' : 'bg-danger')
-          h5.card-title
+          h1.card-title.text-light
             | Mitrums (%)
-          h1.card-title
+          h1.card-title.text-light
             = "#{@presenter.room_measurement.humidity} %"
 
 - else
+  .jumbotron.jumbotron-fluid
+    .container
+      h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+
   .alert.alert-danger role="alert"
     | Telpas gaisa kvalitātei nav neviena mērījuma!

@@ -1,5 +1,9 @@
 h1.my-4
- | VPP 6.6
+  | VPP 6.6
+
+  = link_to new_institution_path, class: 'btn btn-primary float-right' do
+    |Pievienot
+
 .row
   - @presenter.institutions.each do |institution|
     .col-lg-4.col-sm-6.mb-4

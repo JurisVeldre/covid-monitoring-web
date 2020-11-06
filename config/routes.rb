@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :institutions, only: [:index, :show]
-  resources :rooms, only: :show
+  root to: 'institutions#index'
+
+  resources :institutions, except: :destroy do
+    scope module: :institutions do
+      resources :rooms, except: :destroy
+    end
+  end
 end
