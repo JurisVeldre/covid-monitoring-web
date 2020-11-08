@@ -25,7 +25,7 @@ Bundler.require(*Rails.groups)
 module CovidMonitoring
   class Application < Rails::Application
     config.load_defaults 6.0
-    config.mongoid.logger = Logger.new(Rails.root + 'log/mongoid.log', :warn)
+    config.mongoid.logger = Logger.new(Rails.root + 'log/mongoid.log')
     config.mongoid.logger.level = Logger::INFO
     config.mongoid.preload_models = false
     config.generators do |g|

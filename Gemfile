@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.0'
 
 # Framework
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
@@ -12,6 +12,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'jquery-rails', '~> 4.4'
 gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 5.2.1'
+gem "passenger"
 
 # Views
 gem 'simple_form', '~> 5.0.1'
