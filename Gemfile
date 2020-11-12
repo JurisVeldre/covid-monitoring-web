@@ -5,6 +5,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+# Deploy
+gem 'bcrypt_pbkdf'
+gem 'ed25519'
+
 # Framework
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 
@@ -12,7 +16,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'jquery-rails', '~> 4.4'
 gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 5.2.1'
-gem "passenger"
 
 # Views
 gem 'simple_form', '~> 5.0.1'
@@ -37,6 +40,13 @@ group :development, :test do
 end
 
 group :development do
+  # Deploy
+  gem 'capistrano',         require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano3-puma',   require: false
+
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '~> 3.2'
   gem 'web-console', '>= 3.3.0'

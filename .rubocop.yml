@@ -6,6 +6,9 @@ AllCops:
     - 'bin/*'
     - 'node_modules/**/*'
     - 'config/initializers/*'
+    - 'config/deploy/staging.rb'
+    - 'config/deploy/production.rb'
+    - 'config/deploy.rb'
 
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
