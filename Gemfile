@@ -14,7 +14,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 
 # Runtime
 gem 'jquery-rails', '~> 4.4'
-gem 'puma', '~> 4.1'
+gem 'puma'
 gem 'webpacker', '~> 5.2.1'
 
 # Views
@@ -34,6 +34,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rubocop', '~> 0.79.0', require: false
   gem 'rubocop-rails', '~> 2.4.1', require: false

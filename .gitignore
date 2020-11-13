@@ -26,7 +26,8 @@ spec/examples.txt
 /coverage
 
 # Ignore local developoment variables
-.env
+.env.development.local
+.env.production.local
 
 # Ignore Yarn artifacts
 yarn-error.log

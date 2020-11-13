@@ -22,7 +22,7 @@ set :puma_error_log,  "#{release_path}/log/puma.error.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
-set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+set :puma_init_active_record, false  # Change to false when not using ActiveRecord
 
 ## Defaults:
 # set :scm,           :git
@@ -32,7 +32,6 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-# set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do

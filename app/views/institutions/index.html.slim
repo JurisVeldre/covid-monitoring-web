@@ -5,12 +5,17 @@ h1.my-4
     |Pievienot
 
 .row
-  - @presenter.institutions.each do |institution|
-    .col-lg-4.col-sm-6.mb-4
-      .card.h-100
-        a href="#{institution_path(institution)}"
-          img.card-img-top alt="" src="https://www.nicepng.com/png/detail/154-1549461_3d-house-vector-vector-houses-icon-png.png"
-        .card-body
-          h3.card-title
-            a
-              = institution.name
+  - if @presenter.institutions.present?
+    - @presenter.institutions.each do |institution|
+      .col-lg-4.col-sm-6.mb-4
+        .card.h-100
+          a href="#{institution_path(institution)}"
+            img.card-img-top alt="" src="https://www.nicepng.com/png/detail/154-1549461_3d-house-vector-vector-houses-icon-png.png"
+          .card-body
+            h3.card-title
+              a
+                = institution.name
+  - else
+    .alert.alert-danger role="alert"
+      | Nav pievienota neviena iestāde!
+

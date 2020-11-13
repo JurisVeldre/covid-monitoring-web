@@ -1,16 +1,9 @@
 development:
   clients:
     default:
-      database: local
-      hosts:
-        - localhost:27017
-test:
+      uri: <%= ENV['mongo_uri'] %>
+
+production:
   clients:
     default:
-      database: covid_monitoring_test
-      hosts:
-        - localhost:27017
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+      uri: <%= ENV['mongo_uri'] %>
