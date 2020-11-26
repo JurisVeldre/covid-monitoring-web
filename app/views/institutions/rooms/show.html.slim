@@ -6,23 +6,23 @@ nav aria-label="breadcrumb"
       a href="#{@presenter.institution_link(@presenter.room.institution)}"
         = @presenter.room.institution.name
     li.breadcrumb-item.active aria-current="page"
-      = "Telpa Nr. #{@presenter.room.name}"
+      = "Telpa: #{@presenter.room.name}"
 
 - if @presenter.room_measurement.present?
   .jumbotron.jumbotron-fluid class=(@presenter.quality_in_limits ? 'bg-green' : 'bg-red')
     .container
       - if @presenter.quality_in_limits
-        h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+        h1.display-4 = "Telpa: #{@presenter.room.name}"
         | Telpas gaisa kvalitāte ir normas robežās!
       - else
-        h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+        h1.display-4 = "Telpa: #{@presenter.room.name}"
         | Uzsāciet telpas vēdināšanu!
 
   .row
     .col-sm-6
       .card
         .d-flex.justify-content-center
-          img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/2784/2784423.svg"
+          img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/3209/3209891.svg"
         .card-body class=(@presenter.co2_check ? 'bg-success' : 'bg-danger')
           h1.card-title.text-light
             | Co2 (ppm)
@@ -31,7 +31,7 @@ nav aria-label="breadcrumb"
     .col-sm-6
       .card
         .d-flex.justify-content-center
-          img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/3209/3209891.svg"
+          img.card-img-top.measurement-img src="https://www.flaticon.com/svg/static/icons/svg/2784/2784423.svg"
         .card-body class=(@presenter.humidity_check ? 'bg-success' : 'bg-danger')
           h1.card-title.text-light
             | Mitrums (%)
@@ -41,7 +41,7 @@ nav aria-label="breadcrumb"
 - else
   .jumbotron.jumbotron-fluid
     .container
-      h1.display-4 = "Telpa Nr. #{@presenter.room.name}"
+      h1.display-4 = "Telpa: #{@presenter.room.name}"
 
   .alert.alert-danger role="alert"
     | Telpas gaisa kvalitātei nav neviena mērījuma!

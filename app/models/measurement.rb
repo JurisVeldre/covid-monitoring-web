@@ -2,11 +2,11 @@
 
 class Measurement
   include Mongoid::Document
+  store_in collection: 'sensorDataAranet'
 
   field :humidity, type: String
   field :co2, type: String
+  field :sensor_id, type: String
 
-  belongs_to :room, class_name: 'Institutions::Room'
-
-  validates :humidity, :co2, :room_id, presence: true
+  validates :humidity, :co2, :sensor_id, presence: true
 end

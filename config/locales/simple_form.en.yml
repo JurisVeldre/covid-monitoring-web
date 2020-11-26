@@ -6,7 +6,7 @@ en:
       institution:
         name: Nosaukums
       institutions_room:
-        name: Telpas numurs
+        name: Telpas nosaukums
         sensor_id: Sensora identifikators
     error_notification:
       default_message: "Please review the problems below:"
