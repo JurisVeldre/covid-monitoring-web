@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :institutions, except: :destroy do
     scope module: :institutions do
-      resources :rooms, except: :destroy
+      resources :rooms, except: :destroy do
+        resource :api, only: [:show]
+      end
     end
   end
 end
