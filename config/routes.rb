@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       resources :rooms, except: :destroy
     end
   end
+
+  get '/api/:id', to: 'api#show'
 end

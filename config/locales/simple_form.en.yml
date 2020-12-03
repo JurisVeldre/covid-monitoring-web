@@ -8,6 +8,7 @@ en:
       institutions_room:
         name: Telpas nosaukums
         sensor_id: Sensora identifikators
+        beacon_id: Bākas identifikators
     error_notification:
       default_message: "Please review the problems below:"
   helpers:

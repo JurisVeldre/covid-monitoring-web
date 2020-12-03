@@ -10,6 +10,7 @@ module Institutions
     field :name, type: String
     field :sensor_id, type: String
     field :institution_id, type: String
+    field :beacon_id, type: String
 
     belongs_to :institution, class_name: 'Institution'
 
