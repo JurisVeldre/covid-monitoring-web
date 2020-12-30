@@ -6,7 +6,9 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.2.1",
     "bootstrap": "^4.5.3",
+    "ify-loader": "^1.1.0",
     "jquery": "^3.5.1",
+    "plotly.js": "^1.58.4",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },

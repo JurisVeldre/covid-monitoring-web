@@ -47,6 +47,11 @@ default: &default
     - .jpeg
     - .jpg
 
+  module:
+    rules:
+      test: /\.js$/,
+      loader: 'ify-loader'
+
 development:
   <<: *default
   compile: true

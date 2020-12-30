@@ -8,4 +8,6 @@ class Institution
   has_many :rooms, dependent: :destroy, class_name: 'Institutions::Room'
 
   validates :name, presence: true
+
+  include Mongoid::Timestamps
 end

@@ -10,6 +10,7 @@ gem 'bcrypt_pbkdf'
 gem 'ed25519'
 
 # Framework
+gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 
 # Runtime

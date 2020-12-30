@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class InstitutionsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @presenter = Institutions::IndexPresenter.new(Institution.all)
   end

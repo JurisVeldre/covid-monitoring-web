@@ -9,4 +9,14 @@ html lang="lv"
 
   body
     .container
+      div
+        - if current_user.present?
+            = current_user.name
+        .float-right
+          - if user_signed_in?
+            = link_to 'Iziet', destroy_user_session_path
+          - elsif request.env['PATH_INFO'] == '/users/sign_up'
+            return
+          - elsif request.env['PATH_INFO'] != '/users/sign_in'
+            = link_to 'Pieslēgties', new_user_session_path
       = yield

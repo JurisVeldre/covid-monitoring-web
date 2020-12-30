@@ -16,6 +16,8 @@ module Institutions
 
     validates :name, :sensor_id, :institution_id, presence: true
 
+    include Mongoid::Timestamps
+
     def measurements
       Measurement.where(sensor_id: sensor_id)
     end
