@@ -28,6 +28,8 @@ module CovidMonitoring
     config.mongoid.logger = Logger.new(Rails.root + 'log/mongoid.log')
     config.mongoid.logger.level = Logger::INFO
     config.mongoid.preload_models = false
+    config.hosts << /[a-z0-9]+\.ngrok\.io/
+    config.filter_parameters += [:password, :password_confirmation]
     config.generators do |g|
       g.orm :mongoid
     end

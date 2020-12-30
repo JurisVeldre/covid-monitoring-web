@@ -6,4 +6,5 @@ import 'css/site'
 import 'css/main';
 
 import 'jquery'
-import('src/plugins')
+import 'src/plugins'
+import 'src/plotly'

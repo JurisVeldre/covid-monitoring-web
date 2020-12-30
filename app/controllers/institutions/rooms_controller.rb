@@ -2,6 +2,8 @@
 
 module Institutions
   class RoomsController < ApplicationController
+    before_action :authenticate_user!
+
     def show
       room = Institutions::Room.find(id: params[:id])
 

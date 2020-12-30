@@ -1,0 +1,28 @@
+h2 = "Labot lietotāju"
+
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  .card
+    .card-header
+      .card-title
+        = 'Pievienot jaunu institūciju'
+        = f.error_notification
+    .card-body
+      = f.input :name, required: true, autofocus: true
+      = f.input :password,
+        hint: "Atstājiet tukšu, ja neveiciet izmaiņas",
+        required: false,
+        input_html: { autocomplete: "jaunā parole" }
+      = f.input :password_confirmation,
+        required: false,
+        input_html: { autocomplete: "jaunā parole" }
+      = f.input :current_password,
+        hint: "Ievadiet pašreizējo paroli",
+        required: true,
+        input_html: { autocomplete: "tagadējā parole" }
+      h3
+        |Atcelt izmaiņas
+      p
+        = link_to "Atcelt", registration_path(resource_name), data: { confirm: "Vai tiešām vēlaties atcelt lietotāja labošanu?" }, method: :delete
+    .card-footer
+      = f.button :submit, class: 'btn btn-primary'
+      = link_to 'Atcelt', :back, class: 'btn btn-secondary'

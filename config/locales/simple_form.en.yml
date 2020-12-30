@@ -8,6 +8,12 @@ en:
       institutions_room:
         name: Telpas nosaukums
         sensor_id: Sensora identifikators
+        beacon_id: Bākas identifikators
+      user:
+        name: Lietotājvārds
+        password: Parole
+        password_confirmation: Parole atkārtoti
+        current_password: Pašreizējā parole
     error_notification:
       default_message: "Please review the problems below:"
   helpers:
